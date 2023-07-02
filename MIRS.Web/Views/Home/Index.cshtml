@@ -1,8 +1,26 @@
-﻿@{
+﻿@model PdfFileContentText
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Tax search text</h1>
+    <p>
+        @Model.pdfFileContentTaxSearch
+    </p>
+    <h1 class="display-4">Tax search images</h1>
+    <p>
+        @Model.pdfFileImageTaxSearch
+    </p>
+    <img src="@ViewBag.ImageData" />
+
+    <h1 class="display-4">Title search text</h1>
+    <p>
+        @Model.pdfFileContentTitleSearch
+    </p>
+    <h1 class="display-4">Title search images</h1>
+    <p>
+        @Model.pdfFileImageTitleSearch
+    </p>
 </div>
